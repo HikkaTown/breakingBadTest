@@ -1,6 +1,6 @@
 import { Col, Row } from 'antd'
 import { VariableSizeList } from 'react-window'
-import EpisodeCard from '../EpisodeCard/EpisodeCard'
+import EpisodeCard from '../EpisodeCard'
 
 function rowItem({ style }, ...args) {
   const item = args[1]
@@ -11,7 +11,7 @@ function getSize() {
   return 130
 }
 
-export default function EpisodesList({ episodes }) {
+function EpisodesList({ episodes }) {
   return (
     <Row style={{ marginTop: 25 }}>
       <Col span={8} offset={8}>
@@ -27,3 +27,5 @@ export default function EpisodesList({ episodes }) {
     </Row>
   )
 }
+
+export default EpisodesList

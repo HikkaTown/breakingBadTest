@@ -1,9 +1,9 @@
 import { Col, Row, Typography } from 'antd'
 import 'antd/dist/antd.min.css'
-import { useEpisodesState } from '../../context/episodeContext'
-import EpisodesList from '../EpisodesList/EpisodesList'
-import GetDataBtn from '../GetDataBtn/GetDataBtn'
-import SortingBtns from '../SoringBtns/SortingBtns'
+import { useEpisodesState } from '../../context'
+import EpisodesList from '../EpisodesList'
+import GetDataBtn from '../GetDataBtn'
+import SortingBtns from '../SoringBtns'
 import './App.scss'
 
 const { Title } = Typography

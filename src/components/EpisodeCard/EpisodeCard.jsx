@@ -1,12 +1,16 @@
 import { CloseSquareOutlined } from '@ant-design/icons'
 import { Button, Typography } from 'antd'
-import { useEpisodesDispatch } from '../../context/episodeContext'
-import Counter from '../Counter/Counter'
+import { useEpisodesDispatch } from '../../context'
+import Counter from '../Counter'
 import s from './EpisodeCard.module.scss'
 
 const { Title } = Typography
 export default function EpisodeCard({ item, style }) {
   const dispatch = useEpisodesDispatch()
+
+  const handleRemove = () => {
+    dispatch({ type: 'removeEpisode', item })
+  }
 
   return (
     <div style={style} className={s.card}>
@@ -17,9 +21,7 @@ export default function EpisodeCard({ item, style }) {
       <Button
         type="danger"
         icon={<CloseSquareOutlined />}
-        onClick={() => {
-          dispatch({ type: 'removeEpisode', item })
-        }}
+        onClick={handleRemove}
       />
     </div>
   )

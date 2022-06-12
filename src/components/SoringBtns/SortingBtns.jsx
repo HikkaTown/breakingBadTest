@@ -1,7 +1,7 @@
 import { Button, Col, Row } from 'antd'
-import { useEpisodesDispatch } from '../../context/episodeContext'
+import { useEpisodesDispatch } from '../../context'
 
-export default function SortingBtns() {
+function SortingBtns() {
   const dispatch = useEpisodesDispatch()
 
   const handleDescending = () => {
@@ -31,3 +31,5 @@ export default function SortingBtns() {
     </>
   )
 }
+
+export default SortingBtns

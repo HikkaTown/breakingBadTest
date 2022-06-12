@@ -1,8 +1,8 @@
 import { Button } from 'antd'
 import { useState } from 'react'
-import { useEpisodesDispatch } from '../../context/episodeContext'
+import { useEpisodesDispatch } from '../../context'
 
-export default function GetDataBtn() {
+function GetDataBtn() {
   const [loading, setLoading] = useState(false)
   const dispatch = useEpisodesDispatch()
   const handleClick = (e) => {
@@ -24,3 +24,5 @@ export default function GetDataBtn() {
     </Button>
   )
 }
+
+export default GetDataBtn
